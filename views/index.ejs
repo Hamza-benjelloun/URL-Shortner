@@ -24,11 +24,13 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td><a href="https://www.google.com">https://www.google.com</a></td>
-                    <td><a href="/123456">123456</a></td>
-                    <td>10</td>
-                </tr>
+                <% shortUrls.array.forEach(element => { %>    
+                    <tr>
+                        <td><a href="<% element.full %>"><% element.full %></a></td>
+                        <td><a href="<% element.short %>"><% element.short %></a></td>
+                        <td><% element.click %></td>
+                    </tr>
+                <% }); %>
             </tbody>
         </table>
     </div>
